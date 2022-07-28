@@ -1,18 +1,24 @@
+#! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! #
+# This Wix website !NO LONGER EXISTS! - do not bother spamming it  #
+#! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! #
+
+
+
 import requests
 import random
 import time
 from random_user_agent.user_agent import UserAgent
 from random_user_agent.params import SoftwareName, OperatingSystem
 
-software_names = [SoftwareName.CHROME.value]
-operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value]   
-user_agent_rotator = UserAgent(software_names=software_names, operating_systems=operating_systems, limit=100)
-user_agent = user_agent_rotator.get_random_user_agent()
-
 def r(length):
     return ''.join(random.choice('1234567890') for i in range (length))
 
 for i in range(250):
+    software_names = [SoftwareName.CHROME.value]
+    operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value]   
+    user_agent_rotator = UserAgent(software_names=software_names, operating_systems=operating_systems, limit=100)
+    user_agent = user_agent_rotator.get_random_user_agent()
+    
     print("\nGrabbing fake info")
     x = requests.get("https://random-data-api.com/api/users/random_user").json()
     c = x["first_name"]
