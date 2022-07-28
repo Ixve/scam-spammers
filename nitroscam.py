@@ -19,8 +19,8 @@ for i in range(512):
     }
 
     data = {
-        'userName': f'{r(512)}@gmail.com',
-        'password': f'{r(512)}',
+        'userName': f'{r(815)}@gmail.com',
+        'password': f'{r(815)}',
         'url': 'https://dlscord-egifs.com/fromsteamnitro-auth',
         }
     
