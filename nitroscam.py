@@ -1,3 +1,9 @@
+##############################################################
+# Site: 'dlscord-egifs.com'                                  #
+# Poses as a "free Nitro" website to steal Steam credentials #
+##############################################################
+
+
 import requests
 import random
 import time
