@@ -1,3 +1,8 @@
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+# This website is no longer up, do not attempt spamming it#
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
+
+
 ##############################################################
 # Site: 'dlscord-egifs.com'                                  #
 # Poses as a "free Nitro" website to steal Steam credentials #
