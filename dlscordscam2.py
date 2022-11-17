@@ -17,9 +17,9 @@ user_agent_rotator = UserAgent(software_names=software_names, operating_systems=
 user_agent = user_agent_rotator.get_random_user_agent()
 
 def x(length):
-    return ''.join(random.choice('[]\;/.,qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*()_+{}|":><?') for i in range (length))
+    return ''.join(random.choice('qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPASDFGHJKLZXCVBNM') for i in range (length))
 
-for i in range(250):
+for i in range(251):
     headers = { "Host": "dlscordjbost.com", "User-Agent": f"{user_agent}", "Content-Length": "19", "Origin": "https://dlscordjbost.com", "DNT": "1", "Connection": "keep-alive", "Cookie": "timezoneOffset=3600,0", }
     data = {
         "userName": f"{x(625)}",
@@ -28,11 +28,11 @@ for i in range(250):
         }
 
     print(f"\n{Fore.WHITE}Generated Data:\n{data}\n")
-    time.sleep(1)
+    time.sleep(0.1)
     try:
         r = requests.post("https://dlscordjbost.com/check.php", data=data, headers=headers, timeout=10)
         if r.status_code == 200:
-            print(f"{Fore.GREEN}[+] POST Request Successful\nResponse: {Fore.YELLOW}{r.json()} {Fore.WHITE}")
+            print(f"{Fore.GREEN}[+] POST Request Successful ({i}/250)\nResponse: {Fore.YELLOW}{r.json()} {Fore.WHITE}")
         else:
             print(f"{Fore.RED}[-] POST Request Unsuccessful{Fore.WHITE}, Response:\n{r.json()}\nStatus Code: {r.status_code}\n\nExitting program, goodbye")
             exit()
